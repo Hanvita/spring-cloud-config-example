@@ -4,10 +4,21 @@ server:
 spring:
   application:
     name: example
+
   cloud:
     config:
       uri: http://localhost:8080
       profile: alpha
+
+    bus:
+      trace:
+        enabled: true
+
+  rabbitmq:
+    host: 10.162.4.171
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
 
 management:
   security:

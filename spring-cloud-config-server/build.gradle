@@ -3,7 +3,7 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 ext {
-	springCloudVersion = 'Dalston.RELEASE'
+	springCloudVersion = 'Edgware.RELEASE'
 }
 
 repositories {
@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-config-server')
+	compile("org.springframework.cloud:spring-cloud-config-monitor")
+	compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
 }
 
 dependencyManagement {
